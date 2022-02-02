@@ -1,24 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="{{ path('project_index') }}">Projets</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="{{ path('skills_index') }}">Technologies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">CV</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Contact</a>
-        </li>
-      </ul>
-      </form>
-    </div>
-  </div>
+<nav class="navbar">
+	<ul>
+		<li class="nav-item {{ app.request.get(" _route") in [" home_index"] ? " navbar-active" : " " }}">
+			<a class="nav-link" href="/">
+				<i class="fas fa-home"></i>
+			</a>
+			<span class="nav-label">Accueil</span>
+		</li>
+		<li class="nav-item {{ app.request.get(" _route") in [" project_index"] ? " navbar-active" : " " }}">
+			<a class="nav-link" href="{{ path('project_index') }}"></a>
+			<span class="nav-label">Projets</span>
+		</li>
+		<li class="nav-item {{ app.request.get(" _route") == " skills_index" ? " navbar-active" : " " }}">
+			<a class="nav-link" href="{{ path('skills_index') }}"></a>
+			<span class="nav-label">Technologies</span>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#"></a>
+			<span class="nav-label">CV</span>
+		</li>
+		<li class="nav-item ">
+			<a class="nav-link" href="#"></a>
+			<span class="nav-label">Contact</span>
+		</li>
+	</ul>
 </nav>
