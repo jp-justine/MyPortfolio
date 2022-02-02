@@ -17,7 +17,7 @@ class Skills
     private $icon;
 
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'skills')]
-    private $user;
+    private User $user;
 
     public function getId(): ?int
     {

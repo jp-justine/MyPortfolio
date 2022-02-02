@@ -6,6 +6,9 @@ use App\Entity\Project;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use App\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class ProjectType extends AbstractType
 {
@@ -14,9 +17,11 @@ class ProjectType extends AbstractType
         $builder
             ->add('image')
             ->add('title')
-            ->add('description')
+            ->add('description', TextareaType::class, [
+                'required' => false,
+            ])
             ->add('link')
-            ->add('user')
+
         ;
     }
 
