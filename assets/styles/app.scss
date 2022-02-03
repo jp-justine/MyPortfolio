@@ -1,7 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-    background: no-repeat url(../images/fond.svg)
+    background:  url(../images/fond.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.main-home {
+    flex-grow: 1;
 }
 
 .main-container {
@@ -11,8 +18,7 @@ body {
 }
 
 .navbar {
-    background-color: transparent;
-    overflow: hidden;
+    background-color: white;
 
     li {
         color: black;
@@ -37,11 +43,66 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.main-home {
+    height: 3rem;
+}
+.adminLogo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box {
+    width:700px;
+    padding-top: 5px;
+    border-style: solid;
+    border-color: black;
+    padding-left: 3px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    margin-left: 3rem;
+}
+
+.spacer {
+    height: 8rem;
+}
+
+h2 {
+    font-size: 70px;
+}
+h1 {
+    font-size: 90px; 
 }
 
 @media (min-width: 992px) {
     .main-container {
         flex-direction: column;
     }
+
+    .navbar {
+        background-color: transparent;
+    }
+
+    .box {
+        margin-left: 4rem;
+        font-size:20px
+    }
+
+    .spacer {
+        height: 5rem;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-left: 2rem;
+    }
+
+    h2 {
+        font-size:50px;
+        margin-left: 2rem;
+    }
+
 }

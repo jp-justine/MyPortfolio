@@ -29,25 +29,22 @@ class ProjectFixtures extends Fixture
             'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
             Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
-        ],       [
+        ],       
+        [
             'image' => 'https://picsum.photos/300/200',
             'title' => 'Journal d\'une scéne de crime',
             'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
             Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
-        ],       [
+        ],       
+        [
             'image' => 'https://picsum.photos/300/200',
             'title' => 'Journal d\'une scéne de crime',
             'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
             Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
-        ],       [
-            'image' => 'https://picsum.photos/300/200',
-            'title' => 'Journal d\'une scéne de crime',
-            'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
-            Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
-            'link' => 'https://www.linkedin.com/in/justine-petit/',
-        ],       [
+        ],       
+        [
             'image' => 'https://picsum.photos/300/200',
             'title' => 'Journal d\'une scéne de crime',
             'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :

@@ -19,6 +19,8 @@
 	</head>
 	<body class="main-container">
 		{% include 'Components/_navbar.html.twig' %}
-		{% block body %}{% endblock %}
+		{% block body %}
+		{% endblock %}
+		<div class="adminLogo"><a href="/login"><img src="{{ asset("/build/images/maneki-neko.png") }}" alt=".." style="height: 150px;"></a></div>
 	</body>
 </html>

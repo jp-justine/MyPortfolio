@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-	<main>
+	<main class="main-home">
 		<div class="cards-container">
 				{% for project in projects %}
 					<div class="card" style="width: 18rem;">
@@ -18,7 +18,9 @@
 							<a href="{{ project.link }}" class="btn btn-primary">lien</a>
 						</div>
 					</div>
+					<div class="spacer"></div>
 				{% endfor %}
+				
 		</div>
 
 		{% if is_granted('ROLE_ADMINISTRATOR') %}
