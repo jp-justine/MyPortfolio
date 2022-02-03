@@ -18,37 +18,37 @@ class ProjectFixtures extends Fixture
         ],
         [
             'image' => 'https://picsum.photos/300/200',
-            'title' => 'Journal d\'une scéne de crime',
-            'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
-            Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
+            'title' => 'The Wild Post',
+            'description' => 'Projet fictif de formation a la Wild Code school 
+            Création d\'un site web statique sous forme d\'un journal de la wild de Reims',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
         ],
         [
             'image' => 'https://picsum.photos/300/200',
-            'title' => 'Journal d\'une scéne de crime',
-            'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
-            Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
+            'title' => 'The Wild Post',
+            'description' => 'Projet fictif de formation a la Wild Code school 
+            Création d\'un site web statique sous forme d\'un journal de la wild de Reims',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
         ],       
         [
             'image' => 'https://picsum.photos/300/200',
-            'title' => 'Journal d\'une scéne de crime',
-            'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
-            Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
+            'title' => 'The Wild Post',
+            'description' => 'Projet fictif de formation a la Wild Code school 
+            Création d\'un site web statique sous forme d\'un journal de la wild de Reims',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
         ],       
         [
             'image' => 'https://picsum.photos/300/200',
-            'title' => 'Journal d\'une scéne de crime',
-            'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
-            Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
+            'title' => 'The Wild Post',
+            'description' => 'Projet fictif de formation a la Wild Code school 
+            Création d\'un site web statique sous forme d\'un journal de la wild de Reims',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
         ],       
         [
             'image' => 'https://picsum.photos/300/200',
-            'title' => 'Journal d\'une scéne de crime',
-            'description' => 'Projet fictif de formation a la Wild Code school. Sherlock Holmes, Journal d\'une scène de crime :
-            Site web dynamique permettant de prendre des notes sur une “scène de crime” d\'intégrer des hashtags et de retrouver facilement ses notes.',
+            'title' => 'The Wild Post',
+            'description' => 'Projet fictif de formation a la Wild Code school 
+            Création d\'un site web statique sous forme d\'un journal de la wild de Reims',
             'link' => 'https://www.linkedin.com/in/justine-petit/',
         ],
     ];

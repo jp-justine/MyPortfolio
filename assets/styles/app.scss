@@ -7,8 +7,9 @@ body {
     background-position: center center;
 }
 
-.main-home {
+.main {
     flex-grow: 1;
+    height: 3rem;
 }
 
 .main-container {
@@ -46,10 +47,6 @@ body {
     justify-content: space-around;
     margin-top: 5rem;
 }
-
-.main-home {
-    height: 3rem;
-}
 .adminLogo {
     display: flex;
     justify-content: flex-end;
@@ -72,9 +69,11 @@ body {
 
 h2 {
     font-size: 70px;
+    margin-left: 2rem;
 }
 h1 {
-    font-size: 90px; 
+    font-size: 90px;
+    margin-left: 2rem;
 }
 
 @media (min-width: 992px) {
