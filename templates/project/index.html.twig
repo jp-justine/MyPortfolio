@@ -1,52 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Project index
+{% block title %}
+	Project index
 {% endblock %}
 
 {% block body %}
-	<h1>Project index</h1>
-	<div class="card" style="width: 18rem;">
-		<img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-		<div class="card-body">
-			<h5 class="card-title">Special title treatment</h5>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	<main>
+		<div class="cards-container">
+				{% for project in projects %}
+					<div class="card" style="width: 18rem;">
+						<img src="{{ project.image }}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">{{ project.title }}</h5>
+							<p class="card-text">{{ project.description }}</p>
+						</div>
+						<div class="card-body">
+							<a href="{{ project.link }}" class="btn btn-primary">lien</a>
+						</div>
+					</div>
+				{% endfor %}
 		</div>
-		<div class="card-body">
-			<a href="#" class="btn btn-primary">Go somewhere</a>
-			<a href="#" class="btn btn-primary">Go somewhere else</a>
-		</div>
-	</div>
-	{# <table class="table">
-		        <thead>
-		            <tr>
-		                <th>Id</th>
-		                <th>Image</th>
-		                <th>Title</th>
-		                <th>Description</th>
-		                <th>Link</th>
-		                <th>actions</th>
-		            </tr>
-		        </thead>
-		        <tbody>
-		        {% for project in projects %}
-		            <tr>
-		                <td>{{ project.id }}</td>
-		                <td>{{ project.image }}</td>
-		                <td>{{ project.title }}</td>
-		                <td>{{ project.description }}</td>
-		                <td>{{ project.link }}</td>
-		                <td>
-		                    <a href="{{ path('project_show', {'id': project.id}) }}">show</a>
-		                    <a href="{{ path('project_edit', {'id': project.id}) }}">edit</a>
-		                </td>
-		            </tr>
-		        {% else %}
-		            <tr>
-		                <td colspan="6">no records found</td>
-		            </tr>
-		        {% endfor %}
-		        </tbody>
-		    </table> #}
 
-	<a href="{{ path('project_new') }}">Create new</a>
+		{% if is_granted('ROLE_ADMINISTRATOR') %}
+			<a href="{{ path('project_new') }}">Create new</a>
+		{% endif %}
+	</main>
+
 {% endblock %}
