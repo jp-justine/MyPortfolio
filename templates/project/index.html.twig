@@ -38,7 +38,7 @@
 				
 		</div>
 
-		{% if is_granted('ROLE_ADMINISTRATOR') %}
+		{% if is_granted('ROLE_ADMIN') %}
 			<a href="{{ path('project_new') }}">Create new</a>
 		{% endif %}
 	</main>
