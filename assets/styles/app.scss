@@ -118,6 +118,12 @@ a {
     justify-content: flex-end;
 }
 
+.new-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .box {
     width:700px;
     padding-top: 5px;
@@ -140,6 +146,23 @@ h2 {
 h1 {
     font-size: 90px;
     margin-left: 2rem;
+}
+
+.register-text, .deco, .form-container {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.registration-title {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-submit {
+    border-radius: 15px;
+    background-color: chocolate;
 }
 
 @media (min-width: 992px) {
