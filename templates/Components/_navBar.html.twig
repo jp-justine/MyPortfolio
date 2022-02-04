@@ -1,26 +1,19 @@
 <nav class="navbar">
 	<ul>
 		<li class="nav-item {{ app.request.get(" _route") in [" home_index"] ? " navbar-active" : " " }}">
-			<a class="nav-link" href="/">
-				<i class="fas fa-home"></i>
-			</a>
-			<span class="nav-label">Accueil</span>
+			<a class="nav-link" href="/">Accueil</a>
 		</li>
 		<li class="nav-item {{ app.request.get(" _route") in [" project_index"] ? " navbar-active" : " " }}">
-			<a class="nav-link" href="{{ path('project_index') }}"></a>
-			<span class="nav-label">Projets</span>
+			<a class="nav-link" href="{{ path('project_index') }}">Projets</a>
 		</li>
 		<li class="nav-item {{ app.request.get(" _route") == " skills_index" ? " navbar-active" : " " }}">
-			<a class="nav-link" href="{{ path('skills_index') }}"></a>
-			<span class="nav-label">Technologies</span>
+			<a class="nav-link" href="{{ path('skills_index') }}">Technologies</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#"></a>
-			<span class="nav-label">CV</span>
+			<a class="nav-link" href="#">CV</a>
 		</li>
 		<li class="nav-item ">
-			<a class="nav-link" href="#"></a>
-			<span class="nav-label">Contact</span>
+			<a class="nav-link" href="#">Contact</a>
 		</li>
 	</ul>
 </nav>
