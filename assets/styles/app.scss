@@ -95,7 +95,7 @@ a {
 }
 
 .card {
-    background-color: lightgray;
+    background-color: antiquewhite;
     display: grid;
     grid-template-rows: max-content 200px 1fr;
     max-width: 800px;
@@ -119,6 +119,19 @@ a {
 }
 
 .new-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.new-form-container {
+    font-size: 30px;
+}
+.btn {
+    border: solid black 1px;
+    border-radius: 15px;
+}
+
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
