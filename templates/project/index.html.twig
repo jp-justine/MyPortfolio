@@ -5,41 +5,23 @@
 {% endblock %}
 
 {% block body %}
-{# {% for project in projects %}
-
-	<div class="responsive">
-	<div class="gallery">
-		<a target="_blank" href="{{ project.image }}">
-		<img src="{{ project.image }}" alt="Cinque Terre" width="600" height="400">
-		</a>
-		<div class="desc">{{ project.title }} <br/> {{ project.description }}</div>
-		<div>
-			<a href="{{ project.link }}" class="btn btn-primary">lien</a>
-		</div>
-	</div>
-	</div>
-<div class="clearfix"></div>
-{% endfor %} #}
 	<main class="main">
 		<div class="cards-container">
-				{% for project in projects %}
-					<div class="card">
-						<img src="{{ project.image }}" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">{{ project.title }}</h5>
-							<p class="card-text">{{ project.description }}</p>
-						</div>
-						<div class="card-body">
-							<a href="{{ project.link }}" class="btn btn-primary">lien</a>
-						</div>
+			{% for project in projects %}
+				<div class="card">
+					<img src="{{ project.image }}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">{{ project.title }}</h5>
+						<p class="card-text">{{ project.description }}</p>
 					</div>
-					{# <div class="spacer"></div> #}
-				{% endfor %}
-				
+					<div class="card-body">
+						<a href="{{ project.link }}" class="btn btn-primary" target="_blank">lien</a>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
-
 		{% if is_granted('ROLE_ADMIN') %}
-			<a href="{{ path('project_new') }}">Create new</a>
+			<a href="{{ path('project_new') }}">Ajouter un nouveau Projet</a>
 		{% endif %}
 	</main>
 

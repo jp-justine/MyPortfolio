@@ -1,36 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Skills index
-{% endblock %}
+{% block title %}Skills index{% endblock %}
 
 {% block body %}
-	<h1>Skills index</h1>
+	<main class="main">
+		<div class="cards-container">
+			{% for skill in skills %}
+				<div class="card">
+					<img src="{{ skill.icon }}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">title</h5>
+						<p class="card-text">text</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		{% if is_granted('ROLE_ADMIN') %}
+			<a href="{{ path('skills_new') }}">Ajouter une nouvelle technologie</a>
+		{% endif %}
 
-	{# <table class="table">
-		        <thead>
-		            <tr>
-		                <th>Id</th>
-		                <th>Icon</th>
-		                <th>actions</th>
-		            </tr>
-		        </thead>
-		        <tbody>
-		        {% for skill in skills %}
-		            <tr>
-		                <td>{{ skill.id }}</td>
-		                <td>{{ skill.icon }}</td>
-		                <td>
-		                    <a href="{{ path('skills_show', {'id': skill.id}) }}">show</a>
-		                    <a href="{{ path('skills_edit', {'id': skill.id}) }}">edit</a>
-		                </td>
-		            </tr>
-		        {% else %}
-		            <tr>
-		                <td colspan="3">no records found</td>
-		            </tr>
-		        {% endfor %}
-		        </tbody>
-		    </table> #}
-
-	<a href="{{ path('skills_new') }}">Create new</a>
-{% endblock %}
+	{% endblock %}

@@ -1,59 +1,20 @@
 @import "~bootstrap/scss/bootstrap";
-// div.gallery {
-//     border: 1px solid black;
-//     background-color: lightgray;
-//     display: flex;
-//     flex-direction : column;
-//   }
-  
-//   div.gallery:hover {
-//     border: 2px solid #777;
-//   }
-  
-//   div.gallery img {
-//     width: 100%;
-//     height: auto;
-//   }
-  
-//   div.desc {
-//     padding: 15px;
-//     text-align: center;
-//   }
-  
-//   * {
-//     box-sizing: border-box;
-//   }
-  
-//   .responsive {
-//     padding: 0 6px;
-//     float: left;
-//     width: 24.99999%;
-//   }
-  
-//   @media only screen and (max-width: 700px) {
-//     .responsive {
-//       width: 49.99999%;
-//       margin: 6px 0;
-//     }
-//   }
-  
-//   @media only screen and (max-width: 500px) {
-//     .responsive {
-//       width: 100%;
-//     }
-//   }
-  
-//   .clearfix:after {
-//     content: "";
-//     display: table;
-//     clear: both;
-//   }
 
 body {
     background:  url(../images/fond.svg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
+}
+
+i {
+    font-size: 100px;
+    padding: 5px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
 }
 
 .main {
@@ -103,11 +64,6 @@ a {
 }
 
 .cards-container {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax( 20px1fr));
     grid-gap: 70px;
@@ -146,6 +102,7 @@ a {
     padding-bottom: 10px;
     font-size: 35px;
     margin-left: 3rem;
+    background-color: aliceblue;
 }
 
 .spacer {
@@ -176,6 +133,119 @@ h1 {
 .login-submit {
     border-radius: 15px;
     background-color: chocolate;
+}
+
+.contact-form{
+    display: grid;
+    justify-items: center;
+}
+
+/* reset */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  font-size: .825rem;
+  margin-bottom: .5rem;
+  padding-top: .2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* border, padding, margin, width */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.9);
+  padding: .75em 1rem;
+  margin-bottom: 1.5rem;
+}
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+#fs-frm select {
+  text-transform: none;
+}
+
+#fs-frm [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: auto;
+  margin: 0 .5em 0 0 !important;
+}
+
+#fs-frm [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+/* address, locale */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  display: inline;
+}
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
+}
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
 }
 
 @media (min-width: 992px) {
