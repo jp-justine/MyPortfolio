@@ -33,7 +33,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Skills::class)]
     private $skills;
 
-    #[ORM\ManyToMany(targetEntity: Project::class, mappedBy: 'user')]
+    #[ORM\ManyToMany(targetEntity: Projects::class, mappedBy: 'user')]
     private $projects;
 
     public function __construct()
@@ -162,14 +162,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return Collection|Project[]
+     * @return Collection|Projects[]
      */
     public function getProjects(): Collection
     {
         return $this->projects;
     }
 
-    public function addProject(Project $project): self
+    public function addProject(Projects $project): self
     {
         if (!$this->projects->contains($project)) {
             $this->projects[] = $project;
@@ -179,7 +179,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function removeProject(Project $project): self
+    public function removeProject(Projects $project): self
     {
         if ($this->projects->removeElement($project)) {
             $project->removeUser($this);

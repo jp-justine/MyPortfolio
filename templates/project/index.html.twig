@@ -1,28 +1,46 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Project index
+	Projets
 {% endblock %}
 
 {% block body %}
-	<main class="main">
-		<div class="cards-container">
-			{% for project in projects %}
-				<div class="card">
-					<img src="{{ project.image }}" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">{{ project.title }}</h5>
-						<p class="card-text">{{ project.description }}</p>
-					</div>
-					<div class="card-body">
-						<a href="{{ project.link }}" class="btn btn-primary" target="_blank">lien</a>
-					</div>
-				</div>
-			{% endfor %}
+	<div class="main-container">
+		<div class="new-project">
+			{% if is_granted("ROLE_ADMIN") %}
+				<a type="button" class="btn btn-primary" href="{{ path("project_new") }}">Create new project</a>
+			{% endif %}
 		</div>
-		{% if is_granted('ROLE_ADMIN') %}
-			<a href="{{ path('project_new') }}">Ajouter un nouveau Projet</a>
-		{% endif %}
-	</main>
+		<main class="main-project">
 
+			<div class="project-card">
+				{% for project in projects %}
+
+					<div class="card " style="width: 25rem;">
+						<img src="{{ project.image }}" class="card-img-top" alt="Card image">
+						<div class="card-body">
+							<h5 class="card-title">{{ project.title }}</h5>
+							<p class="card-text">{{ project.description }}</p>
+						</div>
+
+						<div class="card-footer">
+							{% for skill in project.skills %}
+								<img class="projects_icons" src={{skill.icon}}>
+							{% endfor %}
+						</div>
+
+						<div class="card-footer">
+							<a type="button" class="btn btn-primary" href="{{ project.link }}" target="_blank">lien</a>
+							{% if is_granted("ROLE_ADMIN") %}
+								<a type="button" class="card-link" href="{{ path("project_edit", {id: project.id}) }}">Edit project</a>
+							{% endif %}
+						</div>
+
+
+					</div>
+
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 {% endblock %}

@@ -571,7 +571,7 @@
                     "homepage": "https://symfony.com/contributors"
                 },
                 {
-                    "name": "Doctrine Project",
+                    "name": "Doctrine Projects",
                     "homepage": "https://www.doctrine-project.org/"
                 }
             ],
@@ -653,7 +653,7 @@
                     "email": "fabien@symfony.com"
                 },
                 {
-                    "name": "Doctrine Project",
+                    "name": "Doctrine Projects",
                     "homepage": "https://www.doctrine-project.org"
                 },
                 {
@@ -3479,16 +3479,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v5.4.3",
+            "version": "v5.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "2fa60c186cb70c940c766ca009b59949cfacd9cc"
+                "reference": "1c156d7093cce68600604f155cb51065e897d7fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/2fa60c186cb70c940c766ca009b59949cfacd9cc",
-                "reference": "2fa60c186cb70c940c766ca009b59949cfacd9cc",
+                "url": "https://api.github.com/repos/symfony/form/zipball/1c156d7093cce68600604f155cb51065e897d7fa",
+                "reference": "1c156d7093cce68600604f155cb51065e897d7fa",
                 "shasum": ""
             },
             "require": {
@@ -3562,7 +3562,7 @@
             "description": "Allows to easily create, process and reuse HTML forms",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/form/tree/v5.4.3"
+                "source": "https://github.com/symfony/form/tree/v5.4.11"
             },
             "funding": [
                 {
@@ -3578,7 +3578,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-26T16:28:35+00:00"
+            "time": "2022-07-20T13:00:38+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -7639,7 +7639,7 @@
                 {
                     "name": "Armin Ronacher",
                     "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
+                    "role": "Projects Founder"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -7854,7 +7854,7 @@
                     "email": "fabien@symfony.com"
                 },
                 {
-                    "name": "Doctrine Project",
+                    "name": "Doctrine Projects",
                     "homepage": "http://www.doctrine-project.org"
                 },
                 {
@@ -10170,5 +10170,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
