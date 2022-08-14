@@ -1,143 +1,237 @@
 @import "~bootstrap/scss/bootstrap";
 
-body {
-    background:  url(../images/fond.svg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-}
+// body {
+//   background: url(../images/fond_montagne.jpg);
+//   background-size: cover;
+//   backdrop-filter: blur(15px);
+// }
 
-i {
-    font-size: 100px;
-    padding: 5px;
-}
+// i {
+//   font-size: 100px;
+//   padding: 5px;
+// }
 
 .socials {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 5rem;
 }
 
 .main {
-    flex-grow: 1;
-    height: 3rem;
+  margin-top: 10rem;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column-reverse;
-    min-height: 100vh;
+.project-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 10rem;
+  padding-top: 3rem;
 }
+
+.new-project {
+  margin-top: 2rem;
+  //padding-top: 2rem;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-container-contact-form {
+  justify-content: center;
+}
+
+// .main-container-project{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     min-height: 100vh;
+//     position: relative;
+//     // bottom: 90px;
+//     padding-bottom: 50px;
+//     padding-top: 90px;
+//     flex-wrap: wrap;
+//     justify-content: center;
+// }
 
 .navbar {
-    background-color: white;
-    bottom: 0;
-    position: fixed;
-    z-index: 7;
-    width: 100%;
-}
+  background-color: darkgrey;
+  z-index: 7;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
-li {
-    color: black;
+  a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
     padding: 14px 16px;
-    list-style: none;
-}
+    text-decoration: none;
+    font-size: xxx-large;
+  }
 
-ul {
-    display: flex;
-}
-
-a {
+  a:hover {
+    background-color: #ddd;
     color: black;
-}
+  }
 
-.nav-link {
-    font-size: 32px;
+  a.active {
+    background-color: #04aa6d;
+    color: white;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    li {
+      color: black;
+      padding: 14px 16px;
+      list-style: none;
+    }
+  }
+
+  .nav-link {
+    font-size: -webkit-xxx-large;
     color: black;
+  }
 }
 
-.card {
-    background-color: antiquewhite;
-    display: grid;
-    grid-template-rows: max-content 200px 1fr;
-    max-width: 800px;
-    margin: 1em auto;
-}
+// .card {
+//   background-color: antiquewhite;
+//   display: grid;
+//   grid-template-rows: max-content 200px 1fr;
+//   max-width: 800px;
+//   margin: 1em auto;
+// }
 
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax( 20px1fr));
-    grid-gap: 70px;
-    margin: 2rem;
-}
-.adminLogo {
-    display: flex;
-    justify-content: flex-end;
-}
+// .cards-container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(20px1fr));
+//   grid-gap: 70px;
+//   margin: 2rem;
+// }
 
-.new-project-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+// .adminLogo {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+
+// .new-project-container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
 .new-form-container {
-    font-size: 30px;
+  font-size: 30px;
 }
+
 .btn {
-    border: solid black 1px;
-    border-radius: 15px;
+  border: solid black 1px;
+  border-radius: 15px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects_icons {
+  height: 40px;
+  width: auto;
 }
 
 .box {
-    width:700px;
-    padding-top: 5px;
-    border-style: solid;
-    border-color: black;
-    padding-left: 3px;
-    padding-bottom: 10px;
-    font-size: 35px;
-    margin-left: 3rem;
-    background-color: aliceblue;
+  width: 700px;
+  padding-top: 5px;
+  border-style: solid;
+  border-color: black;
+  padding-left: 3px;
+  padding-bottom: 10px;
+  font-size: 35px;
+  margin-left: 3rem;
+  background-color: aliceblue;
 }
 
 .spacer {
-    height: 8rem;
+  height: 8rem;
 }
 
 h2 {
-    font-size: 70px;
-    margin-left: 2rem;
-}
-h1 {
-    font-size: 90px;
-    margin-left: 2rem;
+  font-size: 70px;
+  margin-left: 2rem;
 }
 
-.register-text, .deco, .form-container {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
+h1 {
+  font-size: 90px;
+  margin-left: 2rem;
+}
+
+@media (min-width: 992px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  //   .main-container {
+  //     flex-direction: column;
+  //     justify-content: center;
+  //   }
+
+  .navbar {
+    top: 0;
+    position: sticky;
+    z-index: 7;
+    .nav-link {
+      font-size: unset;
+    }
+    a {
+      font-size: unset;
+    }
+  }
+
+  .box {
+    margin-left: 4rem;
+    font-size: 20px;
+  }
+
+  .spacer {
+    height: 5rem;
+  }
+
+  .projects_icons {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+// contact
+.register-text,
+.deco,
+.form-container {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
 }
 
 .registration-title {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .login-submit {
-    border-radius: 15px;
-    background-color: chocolate;
+  border-radius: 15px;
+  background-color: chocolate;
 }
 
-.contact-form{
-    display: grid;
-    justify-items: center;
+.contact-form {
+  display: grid;
+  justify-items: center;
 }
 
 /* reset */
@@ -160,12 +254,13 @@ h1 {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 #fs-frm label,
 #fs-frm legend,
 #fs-frm ::placeholder {
-  font-size: .825rem;
-  margin-bottom: .5rem;
-  padding-top: .2rem;
+  font-size: 0.825rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.2rem;
   display: flex;
   align-items: baseline;
 }
@@ -175,9 +270,9 @@ h1 {
 #fs-frm select,
 #fs-frm textarea,
 #fs-frm #card-element {
-  border: 1px solid rgba(0,0,0,0.2);
-  background-color: rgba(255,255,255,0.9);
-  padding: .75em 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75em 1rem;
   margin-bottom: 1.5rem;
 }
 #fs-frm input:focus,
@@ -221,7 +316,7 @@ h1 {
   appearance: checkbox;
   display: inline-block;
   width: auto;
-  margin: 0 .5em 0 0 !important;
+  margin: 0 0.5em 0 0 !important;
 }
 
 #fs-frm [type="radio"] {
@@ -246,46 +341,4 @@ h1 {
 #fs-frm fieldset.locale input[name="city"],
 #fs-frm fieldset.locale select[name="state"] {
   margin-right: 3%;
-}
-
-@media (min-width: 992px) {
-    .cards-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    }
-    .main-container {
-        flex-direction: column;
-    }
-
-    .navbar {
-        background-color: transparent;
-        bottom: auto;
-        position: relative;
-    }
-
-    .box {
-        margin-left: 4rem;
-        font-size:20px
-    }
-
-    .spacer {
-        height: 5rem;
-    }
-
-    h1 {
-        font-size: 60px;
-        margin-left: 2rem;
-    }
-
-    h2 {
-        font-size:50px;
-        margin-left: 2rem;
-    }
-
-    .adminLogo {
-        bottom: 0;
-        position: fixed;
-        right: 0;
-    }
-
 }

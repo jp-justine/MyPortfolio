@@ -6,14 +6,22 @@
 		<li class="nav-item {{ app.request.get(" _route") in [" project_index"] ? " navbar-active" : " " }}">
 			<a class="nav-link" href="{{ path('project_index') }}">Projets</a>
 		</li>
-		<li class="nav-item {{ app.request.get(" _route") == " skills_index" ? " navbar-active" : " " }}">
-			<a class="nav-link" href="{{ path('skills_index') }}">Technologies</a>
-		</li>
-		<li class="nav-item {{ app.request.get(" _route") == "#" ? " navbar-active" : " " }}">
-			<a class="nav-link" href="#">CV</a>
+		<li class="nav-item {{ app.request.get(" _route") == " #" ? " navbar-active" : " " }}">
+			<a class="nav-link" href="https://drive.google.com/file/d/1hjodSaABLybkSdFd4Oi9_qsEE0b020td/view?usp=sharing" target="_blank">CV</a>
 		</li>
 		<li class="nav-item {{ app.request.get(" _route") == " contact" ? " navbar-active" : " " }}">
-			<a class="nav-link" href="{{ path('contact') }}"">Contact</a>
+			<a class="nav-link" href="{{ path('contact') }}">Contact</a>
 		</li>
-	</ul>
+		
+	</li>
+
+</ul>
+{% if app.user %}
+			<a href="{{ path('app_logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+		{% else %}
+			<div>
+				<a href="{{ path('login') }}">
+					<i class="fa-solid fa-arrow-right-to-bracket fa-2xl"></i></a>
+			</div>
+		{% endif %}
 </nav>

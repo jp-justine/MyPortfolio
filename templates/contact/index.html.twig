@@ -1,28 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!
+{% block title %}Contact
 {% endblock %}
 
 {% block body %}
-	<script src="https://kit.fontawesome.com/67991a0794.js" crossorigin="anonymous"></script>
-	<form class="contact-form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xgedargv" method="POST">
-		<fieldset id="fs-frm-inputs">
-			<label for="full-name">Nom</label>
-			<input type="text" name="name" id="full-name" placeholder="Nom" required="">
-			<label for="email-address">Email</label>
-			<input type="email" name="_replyto" id="email-address" placeholder="email@mail.com" required="">
-			<label for="message">Message</label>
-			<textarea rows="5" name="message" id="message" placeholder="message" required=""></textarea>
-			<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-		</fieldset>
-		<button type="submit">Envoyer</button>
-	</form>
-	<div class="socials">
-		<a class="nav-link" href="https://www.linkedin.com/in/justine-petit/" target="_blank">
-			<i class="fab fa-linkedin"></i>
-		</a>
-		<a class="nav-link" href="https://github.com/jp-justine" target="_blank">
-			<i class="fab fa-github-square"></i>
-		</a>
+	<div class="main-container" id="main-container-contact-form">
+		<div class="main-contact">
+			<form class="contact-form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xgedargv" method="POST">
+				<fieldset id="fs-frm-inputs">
+					<label for="full-name">Nom</label>
+					<input type="text" name="name" id="full-name" placeholder="Nom" required="">
+					<label for="email-address">Email</label>
+					<input type="email" name="_replyto" id="email-address" placeholder="email@mail.com" required="">
+					<label for="message">Message</label>
+					<textarea rows="5" name="message" id="message" placeholder="message" required=""></textarea>
+					<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+				</fieldset>
+				<button type="submit">Envoyer</button>
+			</form>
+			<div class="socials">
+				<a class="nav-link" href="https://www.linkedin.com/in/justine-petit/" target="_blank">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a class="nav-link" href="https://github.com/jp-justine" target="_blank">
+					<i class="fab fa-github-square"></i>
+				</a>
+			</div>
+		</div>
 	</div>
 {% endblock %}
